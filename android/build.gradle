@@ -36,7 +36,7 @@ repositories {
 
 dependencies {
     implementation 'com.facebook.react:react-native:+'
-    implementation 'com.ramotion.fluidslider:fluid-slider:0.3.0'
+    implementation 'com.github.mgonzalezs:fluid-slider-android:+'
     implementation 'com.android.support.constraint:constraint-layout:2.0.0-alpha2'
 }
   
