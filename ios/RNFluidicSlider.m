@@ -56,7 +56,7 @@ RCT_CUSTOM_VIEW_PROPERTY(max, NSNumber *, Slider) {
         [view setMaximumLabelAttributedText: [[NSMutableAttributedString alloc] initWithString: [self._max stringValue] attributes:attrs]];
     }
 
-    if (self._initialPosition != nil) {
+    if (self._initialPosition != nil && self._min != nil && self._max != nil) {
         [view setAttributedTextForFraction:^NSAttributedString * _Nonnull(CGFloat fraction) {
             self._fraction = fraction;
             
@@ -83,7 +83,7 @@ RCT_CUSTOM_VIEW_PROPERTY(max, NSNumber *, Slider) {
 RCT_CUSTOM_VIEW_PROPERTY(initialPosition, NSNumber *, Slider) {
     self._initialPosition = json;
     
-    if (self._max != nil) {
+    if (self._initialPosition != nil && self._min != nil && self._max != nil) {
         [view setAttributedTextForFraction:^NSAttributedString * _Nonnull(CGFloat fraction) {
             self._fraction = fraction;
 
